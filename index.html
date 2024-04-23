@@ -80,7 +80,8 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Lidia &amp; Ilham</h1>
 							<h2>We Are Getting Married</h2>
-							<div class="simply-countdown simply-countdown-one"></div>
+							<div class="simply-countdown simply-countdown-one" style="margin-bottom: 30px;"></div>
+							<h4 id="guest" style="color: #fff"></h4>
 						</div>
 					</div>
 				</div>
@@ -265,6 +266,12 @@
 	<script src="js/main.js"></script>
 
 	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const myParam = urlParams.get('to');
+		if(myParam) {
+			document.getElementById('guest').append(myParam)
+		}
+
 var d = new Date(2024, 4, 5); // Month is zero-based, so 4 represents May
 		
     // default example
